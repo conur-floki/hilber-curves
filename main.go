@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math"
 
 	rl "github.com/gen2brain/raylib-go/raylib"
@@ -52,9 +51,7 @@ func hilbert(i, order int) rl.Vector2 {
 
 	index := i & 3
 	v := vectorArr[index]
-	fmt.Println("estamo activo?")
 	for j := 1; j < order; j++ {
-		fmt.Println("estamo activo loop?")
 		i = i >> 2
 		index = i & 3
 		len := math.Pow(2, float64(j))
